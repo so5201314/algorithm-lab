@@ -6,7 +6,31 @@ C++ algorithm and data-structure practice, including LeetCode and hand-written a
 
 ## 算法目录
 
+### LeetCode
+
+- [42. 接雨水 | Trapping Rain Water](leetcode/0042_trapping_rain_water.cpp) — 排序无关的左右双指针，时间 `O(n)`、额外空间 `O(1)`（LeetCode 提交通过）。
+
+### 独立算法
+
 - [锦标赛算法：寻找最大值与第二大值](algorithms/tournament_top_two.cpp) (`algorithms/tournament_top_two.cpp`)
+
+## LeetCode 42 | 接雨水
+
+**核心公式**：每个位置的积水量由左右最高挡板中较矮的一侧决定：
+
+`water[i] = max(0, min(leftMax[i], rightMax[i]) - height[i])`
+
+**学习过程**：
+
+| 解法 | 时间 | 额外空间 |
+| --- | --- | --- |
+| 暴力枚举左右最高柱子 | `O(n²)` | `O(1)` |
+| 预处理左右最大高度数组 | `O(n)` | `O(n)` |
+| 左右双指针（归档代码） | `O(n)` | `O(1)` |
+
+双指针从两端向中间处理当前较矮的一侧，维护 `leftMax` 和 `rightMax`，每次计算完当前位置的积水后移动对应指针。
+
+源文件采用 LeetCode 的 `class Solution` 形式，可直接用于平台提交，不含独立 `main()`。
 
 ## 锦标赛算法 | Tournament Top Two
 
@@ -24,7 +48,7 @@ C++ algorithm and data-structure practice, including LeetCode and hand-written a
 - 额外空间复杂度：`O(n)`。
 - 输入少于两个元素时抛出 `std::invalid_argument`。
 
-## 编译运行
+## 编译运行（锦标赛算法）
 
 在支持 C++17 的电脑环境下运行：
 
