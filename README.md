@@ -9,10 +9,21 @@ C++ algorithm and data-structure practice, including LeetCode and hand-written a
 ### LeetCode
 
 - [42. 接雨水 | Trapping Rain Water](leetcode/0042_trapping_rain_water.cpp) — 排序无关的左右双指针，时间 `O(n)`、额外空间 `O(1)`（LeetCode 提交通过）。
+- [438. 找到字符串中所有字母异位词 | Find All Anagrams in a String](leetcode/0438_find_all_anagrams_in_a_string.cpp) — 26 位字符计数 + 固定长度滑动窗口，时间 `O(n)`、辅助空间 `O(1)`（已检查代码，待确认在线提交结果）。
 
 ### 独立算法
 
 - [锦标赛算法：寻找最大值与第二大值](algorithms/tournament_top_two.cpp) (`algorithms/tournament_top_two.cpp`)
+
+## LeetCode 438 | 找到字符串中所有字母异位词
+
+**思路**：对目标字符串 `p` 和当前窗口分别统计 26 个小写字母的出现次数，比较两个计数数组是否相等。第一个窗口处理完后，每次右移一格：移出旧字符（计数减 1）、加入新字符（计数加 1）、记录满足条件的起始位置。
+
+- 固定窗口长度：`p.size()`。
+- 窗口起点：`left = right - p.size() + 1`。
+- 时间复杂度：`O(n)`，因为比较的数组固定为 26 个元素。
+- 辅助空间复杂度：`O(1)`，不计返回结果。
+- **验证状态**：代码逻辑已检查；LeetCode 在线提交是否通过尚待确认。
 
 ## LeetCode 42 | 接雨水
 
