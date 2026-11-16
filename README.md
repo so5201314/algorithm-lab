@@ -1,19 +1,45 @@
 # Algorithm Lab
 
-记录 C++ 算法、数据结构与数学推导练习。以自己动手实现、理解原理、验证正确性为主。
+记录 C++ 算法、C 语言编程、数据结构与数学推导练习。以自己动手实现、理解原理、验证正确性和持续复盘为主。
 
-C++ algorithm and data-structure practice, including LeetCode and hand-written algorithms.
+C++ algorithm and data-structure practice, C programming fundamentals, and occasional mathematical reasoning.
+
+## 学习系统入口
+
+本仓库不仅归档题解，也维护长期学习路线与进步记录：
+
+- [学习路线与教学约定](docs/learning-plan.md)：C 语言、C++ 算法、数学三条训练线，以及选题、提示、Review 和迭代方式。
+- [当前进度与掌握情况](docs/progress.md)：已完成、正在学习、待复习和下一步任务。
+- [学习日志](docs/learning-log.md)：记录每次练习暴露的问题、复盘结论和课程调整。
+
+**总原则：不以刷题数量为目标；以能否独立分析、实现、解释、验证，并迁移到嵌入式工程为判断标准。**
+
+## 三条学习主线
+
+1. **C 语言（Dotcpp）**：恢复独立编码能力，重点学习数组、字符串、函数、指针、内存、结构体、位运算和常用数据结构。
+2. **C++ 算法（LeetCode）**：训练问题建模、数据结构选择、算法推导和复杂度分析，不追求竞赛式刷题数量。
+3. **数学思维（偶尔穿插）**：通过短题练习逻辑、证明、不变量、必要与充分条件、离散数学等；不设硬性题量。
+
+具体教学规则和动态调整机制见 [学习路线与教学约定](docs/learning-plan.md)。
 
 ## 算法目录
 
 ### LeetCode
 
-- [42. 接雨水 | Trapping Rain Water](leetcode/0042_trapping_rain_water.cpp) — 排序无关的左右双指针，时间 `O(n)`、额外空间 `O(1)`（LeetCode 提交通过）。
-- [438. 找到字符串中所有字母异位词 | Find All Anagrams in a String](leetcode/0438_find_all_anagrams_in_a_string.cpp) — 26 位字符计数 + 固定长度滑动窗口，时间 `O(n)`、辅助空间 `O(1)`（已检查代码，待确认在线提交结果）。
+- [42. 接雨水 | Trapping Rain Water](leetcode/0042_trapping_rain_water.cpp) — 左右双指针，时间 `O(n)`、额外空间 `O(1)`（仓库记录为 LeetCode 提交通过）。
+- [438. 找到字符串中所有字母异位词 | Find All Anagrams in a String](leetcode/0438_find_all_anagrams_in_a_string.cpp) — 26 位字符计数 + 固定长度滑动窗口，时间 `O(n)`、辅助空间 `O(1)`（代码已归档；在线提交状态以进度文档为准）。
 
 ### 独立算法
 
-- [锦标赛算法：寻找最大值与第二大值](algorithms/tournament_top_two.cpp) (`algorithms/tournament_top_two.cpp`)
+- [锦标赛算法：寻找最大值与第二大值](algorithms/tournament_top_two.cpp) — 两两淘汰并记录冠军直接击败的选手。
+
+## 当前学习状态
+
+当前进度、未完成题目、复习安排和掌握等级统一维护在 [docs/progress.md](docs/progress.md)。新题只有在实际完成相应验证后，才会从“进行中”改为“已完成”。
+
+## 学习记录规则
+
+每次练习后记录：题目与目标、自己的初始思路、遇到的错误、最终原理、复杂度、验证结果、嵌入式迁移点和掌握等级。不要把“看懂讲解”“代码写完”“编译通过”“在线提交通过”“实机验证通过”混为一谈。
 
 ## LeetCode 438 | 找到字符串中所有字母异位词
 
@@ -23,7 +49,7 @@ C++ algorithm and data-structure practice, including LeetCode and hand-written a
 - 窗口起点：`left = right - p.size() + 1`。
 - 时间复杂度：`O(n)`，因为比较的数组固定为 26 个元素。
 - 辅助空间复杂度：`O(1)`，不计返回结果。
-- **验证状态**：代码逻辑已检查；LeetCode 在线提交是否通过尚待确认。
+- **验证状态**：代码逻辑已检查；在线提交状态尚待确认。
 
 ## LeetCode 42 | 接雨水
 
@@ -75,4 +101,4 @@ Maximum: 12
 Second:  10
 ```
 
-> 本仓库是独立的学习代码，不包含公司的 MCU 工程源码。
+> 本仓库是独立的学习代码，不包含公司的 MCU 工程源码。真实项目中的代码、协议和硬件资料仍以各自项目仓库为准。
