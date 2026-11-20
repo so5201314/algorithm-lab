@@ -22,6 +22,11 @@ C++ algorithm and data-structure practice, C programming fundamentals, and occas
 
 具体教学规则和动态调整机制见 [学习路线与教学约定](docs/learning-plan.md)。
 
+## C 语言练习（Dotcpp）
+
+- [2240. 删除数组零元素（CompactIntegers）](c_practice/2240_compact_integers.c) — 数组原地压缩、双下标、数组传参和返回有效长度；用户反馈 Dotcpp 在线提交通过（2026-11-20）。本题在教师分步引导后完成，独立复写待验证。
+- [进度与薄弱点](docs/progress.md) — 按实际表现动态安排后续训练。
+
 ## 算法目录
 
 ### LeetCode
